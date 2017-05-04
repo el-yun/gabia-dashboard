@@ -1,13 +1,369 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>gashboard</title>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
+<!-- Font Awesome(iconic font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
+
+
+
+<style type="text/css">
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+fieldset, img {
+  border: 0 none;
+}
+
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+input, select, textarea, button {
+  vertical-align: middle;
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  background: #fff;
+}
+
+body, th, td, input, select, textarea, button {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+}
+
+caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 1px;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.gt-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+.gt-navbar-project-name {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+.gt-navbar .gt-navbar-header .gt-navbar-nav > li {
+    float: left;
+}
+
+
+.gt-navbar.gt-navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* navbar */
+.gt-navbar {
+	position: fixed;
+    top: 0;
+    width: 100%;
+	z-index: 1100;
+	background-color: #fff;
+	padding: 22px 0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.gt-navbar:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+
+.gt-navbar .gt-navbar-header .gt-navbar-nav > li > a {
+    display: block;
+    padding: 0px 15px;
+    font-size: 16px;
+    color: #555;
+}
+.gt-navbar .gt-navbar-header .gt-navbar-nav.gt-navbar-nav-right {
+    float: right;
+}
+.sidebar {
+    z-index: 1;
+    position: fixed;
+    width: 250px;
+    background-color: #f4f8f9;
+    border-color: #e7e7e7;
+    bottom: 0;
+    top: 72px;
+}
+
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+}
+.input-group-addon, .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.search-ipt {
+    padding: 6px 13px;
+    border: 1px solid #d2d6de;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    font-size: 14px;
+    color: #555;
+    display: table-cell;
+    border-collapse: separate;
+}
+
+.search-ipt:focus{
+	border-color:#66afe9;
+	outline:0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow :inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+
+.search-btn {
+    /*width: 30px;
+    height: 30px;*/
+    position: relative;
+       display: inline-block;
+       vertical-align: middle;
+    padding: 6px 13px;
+    background: #fff;
+    border: 1px solid #d2d6de;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 14px;
+}
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    display: block;
+}
+.sidebar ul li a.active {
+    background-color: #e9f1f3;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.fa.arrow:before {
+    content: "\f104";
+}
+.sidebar .arrow {
+    float: right;
+}
+.sidebar .nav-second-level li a {
+    padding-left: 37px;
+}
+.sidebar .nav-second-level li, .sidebar .nav-third-level li {
+    border-bottom: none !important;
+}
+.menu-toggle {
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    top: 35px;
+    left: 200px;
+    transition-duration: 0.25s;
+}
+.menu-toggle .icon {
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    border-radius: 2px;
+    transition-duration: 0.25s;
+}
+.menu-toggle .icon:before {
+    position: absolute;
+    top: -6px;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    border-radius: 2px;
+    content: "";
+    transition-duration: 0.25s;
+}
+.menu-toggle .icon:after {
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    border-radius: 2px;
+    content: "";
+    transition-duration: 0.25s;
+}
+</style>
+
+
 </head>
 <body>
 
 
+<div id="wrap">
+	
+	<nav class="gt-navbar">
+		<div class="gt-container">
+			<div class="gt-navbar-header">
+				<a class="gt-navbar-project-name" href="#">gashboard v1.0</a>
+				<ul class="gt-navbar-nav gt-navbar-nav-right">
+					<li><a href="#">user name</a></li>
+					<li><a href="#">notice</a></li>
+					<li><a href="#">logout</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="javascript:void(0);" class="menu-toggle">
+			<div class="icon"></div>
+		</a>
+	</nav>
 
-<h1>test</h1>
+	<div class="container" style="position:absolute; top:72px; left:0; bottom:0; right:0">
+		
+		<div class="sidebar" role="navigation">
+	        <div class="navbar-collapse">
+	            <ul class="nav in" id="side-menu">
+	            	<li class="sidebar-search">
+		                <div class="input-group custom-search-form">
+							<input type="text" class="search-ipt form-control" placeholder="Search...">
+							<span class="input-group-btn" style="position: relative; white-space: nowrap; display: table-cell;">
+								<button type="button" class="search-btn"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+		            </li>
+		            <li>
+	                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> management</a>
+	                </li>
+	                <li>
+	                    <a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+	                    <ul class="nav nav-second-level collapse in" aria-expanded="true">
+	                        <li>
+	                            <a href="#">Flot Charts</a>
+	                        </li>
+	                        <li>
+	                            <a href="#">Morris.js Charts</a>
+	                        </li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+	                </li>
+	                <li>
+	                    <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+
+	    <div class="contents" style="position: absolute; left:250px; right:0; top:0; bottom:0; padding: 30px 45px; border-left: 1px solid #e7e7e7;">
+	    	<h1 style="font-size: 42px; margin-bottom: 30px;">소개</h1>
+	    	<blockquote style="    margin: 20px 0; font-style: italic;">
+				<p>2016년 10월 25일, <a href="https://zeit.co/">zeit.co</a>의 개발팀은 서버사이드 렌더링 React 애플리케이션을 위한 프레임워크인 <a href="https://zeit.co/blog/next">Next.js</a> 프레임워크를 발표했습니다.<br>발표 몇 시간 뒤, Next.js처럼 서버사이드 렌더링 <a href="https://vuejs.org">Vue.js</a> 애플리케이션을 위한 프레임워크를 만들자는 생각이 들었고, 그렇게 <strong>Nuxt.js</strong> 가 탄생했습니다.</p>
+			</blockquote>
+			<h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">Nuxt.js란 무엇인가?</h2>
+	    </div>
+
+    </div>
+
+</div>
+
+
+자주 가는 음식점에서 점심을 주문했다. 이른 시각이라 손님은 아직 나 혼자였다. 내어온 식사를 보니 밥이 반은 뭉개지고 반은 굳어있었다. 숟가락으로 뒤적여보다가 도저히 입에 댈 수 없어 그대로 일어나서 계산을 했다. 계산을 하며 오래된 밥을 주시면 어떡하냐고 화를 냈더니, 당황한 주방 아주머니는 ‘새로 한 밥인데’라고 반사적으로 거짓말을 하고는 얼른 치우며 다시 드린다고 했고, 주인 아저씨는 극구 카드를 내미는 데도 안 드실 거면 돈을 받지 않겠다고 했다.
+이런 부도덕은 인간이 다른 인간에게 해를 가하려는 ‘악한’ 마음에서라기보다는, 쓰레기통에 버려야 할 남은 밥을 손님에게 버리려는 유혹을 떨치지 못한 ‘약한’ 마음에서 나온 것이다.
+인간이 사회에서 도덕적으로 살아가기 위해 필요한 것은 ‘인간적인’ 판단 착오에 흔들리지 않는 ‘강인함’이다. 나는 이 강인한 판단력이야말로 한국 사회가 필요로 하는 것, 학교가 교육시켜야 하는 것이라고 생각한다.
+
+
+
 
 </body>
 </html>

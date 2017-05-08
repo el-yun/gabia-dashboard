@@ -1,0 +1,28 @@
+.gt-table {
+	width: 100%;
+	max-width: 100%;
+	border-bottom: 1px solid #e0e0e0;
+}
+.gt-table > thead > tr > th,
+.gt-table > thead > tr > td,
+.gt-table > tbody > tr > th,
+.gt-table > tbody > tr > td {
+	border-top: 1px solid #e0e0e0; 
+}
+
+.gt-table > thead > tr > th,
+.gt-table > tbody > tr > th {
+	padding: 15px 0;
+	text-align: center;
+	background: #e9f1f3; 
+}
+.gt-table > thead > tr > td,
+.gt-table > tbody > tr > td {
+	padding: 10px 0;
+	text-align: center;
+	background: #fff; 
+}
+
+.gt-table > thead > tr > th {
+	border-top-color: #c5c5c5;
+}

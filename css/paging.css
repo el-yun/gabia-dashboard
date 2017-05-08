@@ -1,0 +1,51 @@
+.gt-paging {
+	text-align: center;
+	line-height: normal;
+	padding: 20px 0
+}
+
+.gt-paging > .gt-paging-inner {
+	overflow: hidden;
+	display: inline-block;
+	margin: 0 auto; 
+}
+
+.gt-paging > .gt-paging-inner > .gt-paging-num,
+.gt-paging > .gt-paging-inner > .gt-paging-nav {
+	float: left;
+	font-size: 12px;
+	color: #000;
+	min-width: 30px;
+	line-height: 30px;
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+}
+
+.gt-paging > .gt-paging-inner > em.gt-paging-num,
+.gt-paging > .gt-paging-inner > em.gt-paging-num:hover {
+	color: #fff;
+	background-color: #1f8dd6;
+}
+
+.gt-paging > .gt-paging-inner > .gt-paging-num:hover, .gt-paging > .gt-paging-inner .gt-paging-num:active {
+	color: #000;
+	background-color: #f4f4f4;
+}
+
+.gt-paging > .gt-paging-inner > .gt-paging-nav:hover, .gt-paging > .gt-paging-inner .gt-paging-nav:active {
+	background-color: #f4f4f4;
+}
+
+.gt-paging > .gt-paging-inner .gt-paging-disabled,
+.gt-paging > .gt-paging-inner .gt-paging-disabled:hover,
+.gt-paging > .gt-paging-inner .gt-paging-disabled:focus,
+.gt-paging > .gt-paging-inner .gt-paging-disabled:active {
+	cursor: not-allowed;
+	background-color: #fff;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+.gt-paging-prev span, .gt-paging-first span, .gt-paging-next span, .gt-paging-last span {
+	font-size: 14px;
+}

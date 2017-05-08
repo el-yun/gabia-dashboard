@@ -11,351 +11,172 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
 <!-- Font Awesome(iconic font) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!-- Web Font(notosans) -->
 <link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
-
-
-
-<style type="text/css">
-/* reset */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-fieldset, img {
-  border: 0 none;
-}
-
-dl, ul, ol, menu, li {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none;
-}
-
-input, select, textarea, button {
-  vertical-align: middle;
-}
-
-button {
-  border: 0 none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-body {
-  background: #fff;
-}
-
-body, th, td, input, select, textarea, button {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  color: #333;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-a:active, a:hover {
-  text-decoration: none;
-}
-
-caption {
-  visibility: hidden;
-  overflow: hidden;
-  width: 1px;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-}
-
-address, caption, cite, code, dfn, em, var {
-  font-style: normal;
-  font-weight: normal;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.gt-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-
-.gt-navbar-project-name {
-    font-size: 18px;
-    color: #555;
-    font-weight: bold;
-}
-
-.gt-navbar .gt-navbar-header .gt-navbar-nav > li {
-    float: left;
-}
-
-
-.gt-navbar.gt-navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-/* navbar */
-.gt-navbar {
-	position: fixed;
-    top: 0;
-    width: 100%;
-	z-index: 1100;
-	background-color: #fff;
-	padding: 22px 0;
-	border-bottom: 1px solid #e0e0e0;
-}
-.gt-navbar:after {
-	display: block;
-	content: '';
-	clear: both;
-}
-
-
-.gt-navbar .gt-navbar-header .gt-navbar-nav > li > a {
-    display: block;
-    padding: 0px 15px;
-    font-size: 16px;
-    color: #555;
-}
-.gt-navbar .gt-navbar-header .gt-navbar-nav.gt-navbar-nav-right {
-    float: right;
-}
-.sidebar {
-    z-index: 1;
-    position: fixed;
-    width: 250px;
-    background-color: #f4f8f9;
-    border-color: #e7e7e7;
-    bottom: 0;
-    top: 72px;
-}
-
-
-
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  }
-.sidebar .sidebar-search {
-    padding: 15px;
-}
-.input-group {
-    position: relative;
-    display: table;
-    border-collapse: separate;
-}
-.input-group .form-control {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
-}
-.input-group-btn {
-    position: relative;
-    font-size: 0;
-    white-space: nowrap;
-}
-.input-group-addon, .input-group-btn {
-    width: 1%;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-.search-ipt {
-    padding: 6px 13px;
-    border: 1px solid #d2d6de;
-    border-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    font-size: 14px;
-    color: #555;
-    display: table-cell;
-    border-collapse: separate;
-}
-
-.search-ipt:focus{
-	border-color:#66afe9;
-	outline:0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-	box-shadow :inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-}
-
-
-.search-btn {
-    /*width: 30px;
-    height: 30px;*/
-    position: relative;
-       display: inline-block;
-       vertical-align: middle;
-    padding: 6px 13px;
-    background: #fff;
-    border: 1px solid #d2d6de;
-    border-radius: 4px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    font-size: 14px;
-}
-.sidebar ul li {
-    border-bottom: 1px solid #e7e7e7;
-    position: relative;
-    display: block;
-}
-.sidebar ul li a.active {
-    background-color: #e9f1f3;
-}
-.nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-}
-.fa.arrow:before {
-    content: "\f104";
-}
-.sidebar .arrow {
-    float: right;
-}
-.sidebar .nav-second-level li a {
-    padding-left: 37px;
-}
-.sidebar .nav-second-level li, .sidebar .nav-third-level li {
-    border-bottom: none !important;
-}
-.menu-toggle {
-    position: absolute;
-    width: 24px;
-    height: 14px;
-    top: 35px;
-    left: 200px;
-    transition-duration: 0.25s;
-}
-.menu-toggle .icon {
-    position: absolute;
-    top: 0;
-    width: 24px;
-    height: 2px;
-    background-color: #90a4af;
-    border-radius: 2px;
-    transition-duration: 0.25s;
-}
-.menu-toggle .icon:before {
-    position: absolute;
-    top: -6px;
-    width: 24px;
-    height: 2px;
-    background-color: #90a4af;
-    border-radius: 2px;
-    content: "";
-    transition-duration: 0.25s;
-}
-.menu-toggle .icon:after {
-    position: absolute;
-    top: 6px;
-    width: 24px;
-    height: 2px;
-    background-color: #90a4af;
-    border-radius: 2px;
-    content: "";
-    transition-duration: 0.25s;
-}
-</style>
-
-
+<!-- reset css -->
+<link href='css/reset.css' rel='stylesheet' type='text/css'>
+<link href='css/navbar.css' rel='stylesheet' type='text/css'>
+<link href='css/hamburger.css' rel='stylesheet' type='text/css'>
+<link href='css/sidebar.css' rel='stylesheet' type='text/css'>
+<link href='css/layout.css' rel='stylesheet' type='text/css'>
+<link href='css/input.css' rel='stylesheet' type='text/css'>
+<link href='css/table.css' rel='stylesheet' type='text/css'>
+<link href='css/paging.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 
 <div id="wrap">
 	
-	<nav class="gt-navbar">
-		<div class="gt-container">
-			<div class="gt-navbar-header">
-				<a class="gt-navbar-project-name" href="#">gashboard v1.0</a>
-				<ul class="gt-navbar-nav gt-navbar-nav-right">
+	<header>
+		<nav class="navbar">
+			<div class="gt-container">
+				<a class="navbar-project-name" href="#">gashboard v1.0</a>
+				<ul class="navbar-nav">
 					<li><a href="#">user name</a></li>
 					<li><a href="#">notice</a></li>
 					<li><a href="#">logout</a></li>
 				</ul>
 			</div>
-		</div>
-		<a href="javascript:void(0);" class="menu-toggle">
-			<div class="icon"></div>
-		</a>
-	</nav>
+			<a href="javascript:void(0);" class="hamburger">
+				<div class="icon"></div>
+			</a>
+		</nav>
+	</header>
 
-	<div class="container" style="position:absolute; top:72px; left:0; bottom:0; right:0">
+	<section id="container">
 		
-		<div class="sidebar" role="navigation">
-	        <div class="navbar-collapse">
-	            <ul class="nav in" id="side-menu">
-	            	<li class="sidebar-search">
-		                <div class="input-group custom-search-form">
-							<input type="text" class="search-ipt form-control" placeholder="Search...">
-							<span class="input-group-btn" style="position: relative; white-space: nowrap; display: table-cell;">
-								<button type="button" class="search-btn"><i class="fa fa-search"></i></button>
-							</span>
-						</div>
-		            </li>
-		            <li>
-	                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> management</a>
-	                </li>
-	                <li>
-	                    <a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-	                    <ul class="nav nav-second-level collapse in" aria-expanded="true">
-	                        <li>
-	                            <a href="#">Flot Charts</a>
-	                        </li>
-	                        <li>
-	                            <a href="#">Morris.js Charts</a>
-	                        </li>
-	                    </ul>
-	                </li>
-	                <li>
-	                    <a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
-	                </li>
-	                <li>
-	                    <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
-	                </li>
-	            </ul>
-	        </div>
-	    </div>
+		<aside id="sidebar">
+			<ul class="sidebar-nav">
+				<li class="sidebar-search">
+					<div class="input-group">
+						<input type="text" class="search-ipt form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button type="button" class="search-btn"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-dashboard fa-fw"></i> management</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Flot Charts</a></li>
+						<li><a href="#">Morris.js Charts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Second Level Item</a></li>
+						<li><a href="#">Second Level Item</a></li>
+						<li>
+							<a href="#">Third Level <span class="fa arrow"></span></a>
+							<ul class="sidebar-nav nav-third-level">
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
 
-	    <div class="contents" style="position: absolute; left:250px; right:0; top:0; bottom:0; padding: 30px 45px; border-left: 1px solid #e7e7e7;">
-	    	<h1 style="font-size: 42px; margin-bottom: 30px;">소개</h1>
+	    <article id="contents">
+
+			<h1 style="font-size: 42px; margin-bottom: 30px;">소개</h1>
 	    	<blockquote style="    margin: 20px 0; font-style: italic;">
 				<p>2016년 10월 25일, <a href="https://zeit.co/">zeit.co</a>의 개발팀은 서버사이드 렌더링 React 애플리케이션을 위한 프레임워크인 <a href="https://zeit.co/blog/next">Next.js</a> 프레임워크를 발표했습니다.<br>발표 몇 시간 뒤, Next.js처럼 서버사이드 렌더링 <a href="https://vuejs.org">Vue.js</a> 애플리케이션을 위한 프레임워크를 만들자는 생각이 들었고, 그렇게 <strong>Nuxt.js</strong> 가 탄생했습니다.</p>
 			</blockquote>
-			<h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">Nuxt.js란 무엇인가?</h2>
-	    </div>
 
-    </div>
+			<table class="gt-table">
+				<caption>gtris table</caption>
+				<colgroup>
+					<col><col><col><col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">No.</th>
+						<th scope="col">서비스 명</th>
+						<th scope="col">서비스 가격</th>
+						<th scope="col">최종 수정일</th>
+						<th scope="col">판매 여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11036</td>
+						<td>ATY_무료 체험(무료 체험)</td>
+						<td>0원</td>
+						<td>2017-03-29 15:29:29</td>
+						<td>Y</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="gt-paging">
+				<span class="gt-paging-inner">
+				<a href="#" class="gt-paging-nav gt-paging-first"><span class="fa fa-angle-double-left"></span></a>
+				<a href="#" class="gt-paging-nav gt-paging-prev"><span class="fa fa-angle-left"></span></a>
+				<a href="#" class="gt-paging-num">1</a>
+				<a href="#" class="gt-paging-num">2</a>
+				<a href="#" class="gt-paging-num">3</a>
+				<em class="gt-paging-num">4</em>
+				<a href="#" class="gt-paging-num">5</a>
+				<a href="#" class="gt-paging-num">6</a>
+				<a href="#" class="gt-paging-nav gt-paging-next"><span class="fa fa-angle-right"></span></a>
+				<a href="#" class="gt-paging-nav gt-paging-last"><span class="fa fa-angle-double-right"></span></a>
+				</span>
+			</div>
+
+			<h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">gashboard란 무엇인가?</h2>
+			      <p>Nuxt.js는 범용 Vue.js 애플리케이션을 만들기 위한 프레임워크로, 주요 범위는 클라이언트/서버 배포를 추상화하면서 <strong>UI 렌더링</strong> 을 하는 것입니다.</p>
+			      <p>우리의 목표는 Nuxt.js를 기반 프로젝트로 하거나 Node.js 기반의 프로젝트에 추가해서 사용할 수 있도록 충분히 유연한 프레임워크를 만드는 것입니다.</p>
+			      <p>Nuxt.js는 더 즐거운 <strong>서버 사이드 렌더링</strong> Vue.js 애플리케이션 개발을 위해 필요한 모든 설정들이 미리 준비되어 있습니다.</p>
+			      <p>또한 우리는 <em>nuxt generate</em> 라고 부르는 배포 옵션을 제공하며, 이는 Vue.js 애플리케이션을 <strong>정적으로 생성</strong> 하는 옵션입니다.
+			      이 옵션이 마이크로 서비스를 지향하는 웹 애플리케이션 개발의 다음 단계가 될 수 있다고 생각합니다.</p>
+			      <p>Nuxt.js 프레임워크는 비동기 데이터, 미들웨어, 레이아웃 등과 같이 클라이언트 측과 서버 측 사이에서 개발하는데 도움되는 많은 기능을 제공합니다.</p>
+			      <h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">어떻게 동작합니까?</h2>
+			      <p>Nuxt.js는 범용 Vue.js 애플리케이션을 만들기 위한 프레임워크로, 주요 범위는 클라이언트/서버 배포를 추상화하면서 <strong>UI 렌더링</strong> 을 하는 것입니다.</p>
+			      <p>우리의 목표는 Nuxt.js를 기반 프로젝트로 하거나 Node.js 기반의 프로젝트에 추가해서 사용할 수 있도록 충분히 유연한 프레임워크를 만드는 것입니다.</p>
+			      <p>Nuxt.js는 더 즐거운 <strong>서버 사이드 렌더링</strong> Vue.js 애플리케이션 개발을 위해 필요한 모든 설정들이 미리 준비되어 있습니다.</p>
+			      <p>또한 우리는 <em>nuxt generate</em> 라고 부르는 배포 옵션을 제공하며, 이는 Vue.js 애플리케이션을 <strong>정적으로 생성</strong> 하는 옵션입니다.
+			      이 옵션이 마이크로 서비스를 지향하는 웹 애플리케이션 개발의 다음 단계가 될 수 있다고 생각합니다.</p>
+			      <p>Nuxt.js 프레임워크는 비동기 데이터, 미들웨어, 레이아웃 등과 같이 클라이언트 측과 서버 측 사이에서 개발하는데 도움되는 많은 기능을 제공합니다.</p>
+			      <h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">특징</h2>
+			     	<ul>
+			<li>Vue 파일 작성</li>
+			<li>코드 분할 자동화</li>
+			<li>서버 사이드 렌더링</li>
+			<li>비동기 데이터 기반의 강력한 라우팅 시스템</li>
+			<li>정적 파일 전송</li>
+			<li>ES6/ES7 지원</li>
+			<li>JS &amp; CSS 코드 번들링 및 압축</li>
+			<li>HTML head 태그 관리</li>
+			<li>개발 단계에서 핫 리로딩 사용하기</li>
+			<li>전 처리기 지원: SASS, LESS, Stylus 등</li>
+			</ul>
+
+
+
+
+	    </article>
+
+    </section>
 
 </div>
+
+
+
 
 
 

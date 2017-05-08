@@ -1,0 +1,32 @@
+.gt-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+#container {
+	position: absolute;
+	top: 72px;
+	left: 0;
+	bottom: 0;
+	right: 0
+}
+
+#contents {
+	position: absolute;
+	left: 250px;
+	right: 0;
+	top: 0px;
+	padding: 30px 45px;
+	border-left: 1px solid #e7e7e7;
+}
+
+#sidebar {
+	position: fixed;
+	width: 250px;
+	background-color: #f4f8f9;
+	border-color: #e7e7e7;
+	bottom: 0;
+	top: 72px;
+}

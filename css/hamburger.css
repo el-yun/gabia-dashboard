@@ -1,0 +1,51 @@
+
+
+.hamburger {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    top: 29px;
+    left: 200px;
+    transition-duration: 0.25s;
+}
+.hamburger .icon {
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    transition-duration: 0.25s;
+}
+.hamburger .icon:before {
+    position: absolute;
+    top: -6px;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    content: "";
+    transition-duration: 0.25s;
+}
+.hamburger .icon:after {
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 2px;
+    background-color: #90a4af;
+    content: "";
+    transition-duration: 0.25s;
+}
+
+
+/*.hamburger.gt-active .icon {
+    transition-duration: 0.25s;
+    background: transparent;
+}
+
+.hamburger.gt-active .icon:before {
+    transform: rotateZ(45deg) scaleX(1.25) translate(3px, 3px);
+}
+
+.hamburger.gt-active .icon:after {
+    transform: rotateZ(-45deg) scaleX(1.25) translate(4px, -5px);
+}*/

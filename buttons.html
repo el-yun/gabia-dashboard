@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>gashboard</title>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
+<!-- Font Awesome(iconic font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!-- Web Font(notosans) -->
+<link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
+<!-- reset css -->
+<link href='css/reset.css' rel='stylesheet' type='text/css'>
+<link href='css/global.css' rel='stylesheet' type='text/css'>
+<link href='css/navbar.css' rel='stylesheet' type='text/css'>
+<link href='css/hamburger.css' rel='stylesheet' type='text/css'>
+<link href='css/sidebar.css' rel='stylesheet' type='text/css'>
+<link href='css/layout.css' rel='stylesheet' type='text/css'>
+<link href='css/input.css' rel='stylesheet' type='text/css'>
+<link href='css/table.css' rel='stylesheet' type='text/css'>
+<link href='css/paging.css' rel='stylesheet' type='text/css'>
+<link href='css/grid.css' rel='stylesheet' type='text/css'>
+<link href='css/colors.css' rel='stylesheet' type='text/css'>
+<link href='css/padding.css' rel='stylesheet' type='text/css'>
+<link href='css/buttons.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<div id="wrap">
+	
+	<header>
+		<nav class="navbar">
+			<div class="gt-container">
+				<a class="navbar-project-name" href="#">gashboard v1.0</a>
+				<ul class="navbar-nav">
+					<li><a href="#">user name</a></li>
+					<li><a href="#">notice</a></li>
+					<li><a href="#">logout</a></li>
+				</ul>
+			</div>
+			<a href="javascript:void(0);" class="hamburger">
+				<div class="icon"></div>
+			</a>
+		</nav>
+	</header>
+
+	<section id="container">
+		
+		<aside id="sidebar">
+			<ul class="sidebar-nav">
+				<li class="w3-input-group" style="padding:15px">
+					<input type="text" class="w3-input" placeholder="Search...">
+					<span class="input-group-btn">
+						<button type="button" class="w3-button bg-white bg-hover-light-gray"><i class="fa fa-search"></i></button>
+					</span>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-dashboard fa-fw"></i> management</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Flot Charts</a></li>
+						<li><a href="#">Morris.js Charts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Second Level Item</a></li>
+						<li><a href="#">Second Level Item</a></li>
+						<li>
+							<a href="#">Third Level <span class="fa arrow"></span></a>
+							<ul class="sidebar-nav nav-third-level">
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+
+	    <article id="contents">
+			<h1>Buttons</h1>
+			<p>gashboard provides the following classes for buttons</p>
+			
+			<h2>Basic</h2>
+			<input class="w3-button bg-black" type="button" value="Input Button">
+			<button class="w3-button bg-black">Button Button</button>
+			<a href="https://www.w3schools.com" class="w3-button bg-black">Link Button</a>
+
+			<h2>Button Colors</h2>
+			<button class="w3-button bg-black">Black</button>
+			<button class="w3-button bg-khaki">Khaki</button>
+			<button class="w3-button bg-yellow">Yellow</button>
+			<button class="w3-button bg-red">Red</button>
+			<button class="w3-button bg-purple">Purple</button>
+			<button class="w3-button bg-aqua">Aqua</button>
+			<button class="w3-button bg-blue">Blue</button>
+			<button class="w3-button bg-indigo">Indigo</button>
+			<button class="w3-button bg-green">Green</button>
+			<button class="w3-button bg-teal">Teal</button>
+
+			<h2>Hover Colors</h2>
+			<button class="w3-button bg-black bg-hover-white">White</button>
+			<button class="w3-button bg-black bg-hover-red">Red</button>
+			<button class="w3-button bg-black bg-hover-purple">Purple</button>
+			<button class="w3-button bg-black bg-hover-aqua">Aqua</button>
+			<button class="w3-button bg-black bg-hover-blue">Blue</button>
+			<button class="w3-button bg-black bg-hover-green">Green</button>
+			<button class="w3-button bg-black bg-hover-teal">Teal</button>
+
+			<h2>Button Shapes</h2>
+			<button class="w3-button bg-black">Normal</button>
+			<button class="w3-button bg-black w3-round">Round</button>
+			<button class="w3-button bg-black w3-round-large">Rounder</button>
+			<button class="w3-button bg-black w3-round-xlarge">and Rounder</button>
+			<button class="w3-button bg-black w3-round-xxlarge">and Rounder</button>
+			</p>
+
+			<h2>Button Sizes</h2>
+			<button class="w3-button bg-black w3-tiny">Tiny</button>
+			<button class="w3-button bg-black w3-small">Small</button>
+			<button class="w3-button bg-black w3-medium">Medium</button>
+			<button class="w3-button bg-black w3-large">Large</button>
+			<button class="w3-button bg-black w3-xlarge">xLarge</button>
+			<button class="w3-button bg-black w3-xxlarge">XXLarge</button>
+			<button class="w3-button bg-black w3-xxxlarge">XXXLarge</button>
+			<button class="w3-button bg-black w3-jumbo">Jumbo</button>
+
+			<h2>Button Borders</h2>
+			<button class="w3-button bg-white w3-border">Button</button>
+			<button class="w3-button bg-white w3-border border-blue">Button</button>
+			<button class="w3-button bg-yellow w3-border">Button</button>
+			<button class="w3-button bg-white w3-border border-red w3-round-large">Button</button>
+
+			<h2>Full-width Buttons</h2>
+			<p><button class="w3-button w3-block bg-black">Button</button></p>
+			<p><button class="w3-button w3-block bg-teal">Button</button></p>
+			<p><button class="w3-button w3-block bg-red w3-left-align">Button</button></p>
+
+			<h2>Disabled Buttons</h2>
+			<button class="w3-button bg-teal">Button</button>
+			<button class="w3-button bg-teal w3-disabled">Disabled</button>
+			<input type="button" class="w3-button bg-black" value="Button">
+			<input type="button" class="w3-button bg-black" value="Disabled" disabled="">
+
+	    </article>
+    </section>
+</div>
+
+</body>
+</html>

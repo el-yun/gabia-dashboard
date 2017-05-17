@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>gashboard</title>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
+<!-- Font Awesome(iconic font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!-- Web Font(notosans) -->
+<link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
+<!-- reset css -->
+<link href='css/reset.css' rel='stylesheet' type='text/css'>
+<link href='css/global.css' rel='stylesheet' type='text/css'>
+<link href='css/navbar.css' rel='stylesheet' type='text/css'>
+<link href='css/hamburger.css' rel='stylesheet' type='text/css'>
+<link href='css/sidebar.css' rel='stylesheet' type='text/css'>
+<link href='css/layout.css' rel='stylesheet' type='text/css'>
+<link href='css/input.css' rel='stylesheet' type='text/css'>
+<link href='css/table.css' rel='stylesheet' type='text/css'>
+<link href='css/paging.css' rel='stylesheet' type='text/css'>
+<link href='css/grid.css' rel='stylesheet' type='text/css'>
+<link href='css/colors.css' rel='stylesheet' type='text/css'>
+<link href='css/padding.css' rel='stylesheet' type='text/css'>
+<link href='css/buttons.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<div id="wrap">
+	
+	<header>
+		<nav class="navbar">
+			<div class="gt-container">
+				<a class="navbar-project-name" href="#">gashboard v1.0</a>
+				<ul class="navbar-nav">
+					<li><a href="#">user name</a></li>
+					<li><a href="#">notice</a></li>
+					<li><a href="#">logout</a></li>
+				</ul>
+			</div>
+			<a href="javascript:void(0);" class="hamburger">
+				<div class="icon"></div>
+			</a>
+		</nav>
+	</header>
+
+	<section id="container">
+		
+		<aside id="sidebar">
+			<ul class="sidebar-nav">
+				<li class="sidebar-search">
+					<input type="text" class="w3-input" placeholder="Search...">
+					<span class="input-group-btn">
+						<button type="button" class="w3-button bg-white bg-hover-light-gray search-btn"><i class="fa fa-search"></i></button>
+					</span>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-dashboard fa-fw"></i> management</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Flot Charts</a></li>
+						<li><a href="#">Morris.js Charts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Second Level Item</a></li>
+						<li><a href="#">Second Level Item</a></li>
+						<li>
+							<a href="#">Third Level <span class="fa arrow"></span></a>
+							<ul class="sidebar-nav nav-third-level">
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+
+	    <article id="contents">
+			<h1>Round</h1>
+			<p>gashboard provides the following classes for buttons</p>
+			
+			<h2>example</h2>
+			
+			<div class="w3-panel w3-round-small bg-teal">
+				<p>w3-round-small</p>
+			</div>
+
+			<div class="w3-panel w3-round bg-teal">
+				<p>w3-round</p>
+			</div>
+
+			<div class="w3-panel w3-round-large bg-teal">
+				<p>w3-round-large</p>
+			</div>
+
+			<div class="w3-panel w3-round-xlarge bg-teal">
+				<p>w3-round-xlarge</p>
+			</div>
+
+			<div class="w3-panel w3-round-xxlarge bg-teal">
+				<p>w3-round-xxlarge</p>
+			</div>
+
+			<h2>round size classes</h2>
+			<table class="gt-table">
+			<tbody>
+			<tr>
+			<th>Class</th>
+			<th>Defines</th>
+			</tr>
+			<tr>
+			<td>w3-round</td>
+			<td>Element rounded (border-radius) 4px</td>
+			</tr>
+			<tr>
+			<td>w3-round-small</td>
+			<td>Element rounded (border-radius) 2px</td>
+			</tr>
+			<tr>
+			<td>w3-round-medium</td>
+			<td>Element rounded (border-radius) 4px</td>
+			</tr>
+			<tr>
+			<td>w3-round-large</td>
+			<td>Element rounded (border-radius) 8px</td>
+			</tr>
+			<tr>
+			<td>w3-round-xlarge</td>
+			<td>Element rounded (border-radius) 16px</td>
+			</tr>
+			<tr>
+			<td>w3-round-xxlarge</td>
+			<td>Element rounded (border-radius) 32px</td>
+			</tr>
+			</tbody>
+			</table>
+
+			<h2>circle class</h2>
+			<div>
+				<img src="http://static.gabia.com/gtris/1.1.0/examples/cat1.png" class="w3-circle" style="width:90%;max-width:320px">
+			</div>
+
+			
+
+	    </article>
+    </section>
+</div>
+
+</body>
+</html>

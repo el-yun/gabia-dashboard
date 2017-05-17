@@ -1,55 +1,63 @@
-.input-group {
-    position: relative;
-    display: table;
-}
-
-.input-group .form-control {
-	position: relative;
-	float: left;
+.w3-input, .w3-select {
+	display: block;
 	width: 100%;
-	display: table-cell;
-}
-
-.input-group .input-group-btn {
-    position: relative;
-    display: table-cell;
-    white-space: nowrap;
-    vertical-align: middle;
-    width: 1%;
-    font-size: 0;
-}
-
-.input-group .search-ipt {
-	display: table-cell;
-	padding: 6px 13px;
+	padding: 6px 12px;
 	border: 1px solid #d2d6de;
-	border-radius: 4px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	color: #555;
 }
-
-.input-group .search-ipt:focus {
+.w3-select {
+	height: auto;
+	line-height: 1.42857143;
+}
+.w3-input:focus, .w3-select:focus {
 	border-color: #66afe9;
 	outline: 0;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
 
-.input-group .search-btn {
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 6px 13px;
-	background: #fff;
-	border: 1px solid #d2d6de;
-	border-left: 0px;
-	border-radius: 4px;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	font-size: 14px;
+
+
+.w3-input-group {
+	display: table;
 }
-.input-group .search-btn:hover, .input-group .search-btn:focus {
-	background: #e6e6e6
+
+.w3-input-group .w3-input {
+    display: table-cell;
+    height: 35px;
+    padding: 6px 12px;
+}
+
+.w3-input-group .input-group-btn {
+    display: table-cell;
+}
+
+.w3-input-group .input-group-btn > .w3-button {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #d2d6de;
+    border-left: 0px;
+}
+
+.w3-input-group .input-group-addon {
+	display: table-cell;
+	line-height: 1;
+	padding: 6px 12px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #d2d6de;
+}
+
+.w3-input-group .input-group-addon:first-child {
+    border-right: 0;
+}
+
+.w3-input-group .input-group-addon:last-child {
+    border-left: 0;
+}
+
+.input-group-btn, .input-group-addon {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
 }

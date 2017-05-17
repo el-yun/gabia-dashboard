@@ -26,6 +26,7 @@
 <link href='css/grid.css' rel='stylesheet' type='text/css'>
 <link href='css/colors.css' rel='stylesheet' type='text/css'>
 <link href='css/padding.css' rel='stylesheet' type='text/css'>
+<link href='css/panel.css' rel='stylesheet' type='text/css'>
 <link href='css/buttons.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -96,68 +97,144 @@
 
 	    <article id="contents">
 			<h1>Buttons</h1>
-			<p>gashboard provides the following classes for buttons</p>
-			
-			<h2>Basic</h2>
-			<input class="w3-button bg-black" type="button" value="Input Button">
-			<button class="w3-button bg-black">Button Button</button>
-			<a href="https://www.w3schools.com" class="w3-button bg-black">Link Button</a>
 
-			<h2>Button Colors</h2>
-			<button class="w3-button bg-black">Black</button>
-			<button class="w3-button bg-khaki">Khaki</button>
-			<button class="w3-button bg-yellow">Yellow</button>
-			<button class="w3-button bg-red">Red</button>
-			<button class="w3-button bg-purple">Purple</button>
-			<button class="w3-button bg-aqua">Aqua</button>
-			<button class="w3-button bg-blue">Blue</button>
-			<button class="w3-button bg-indigo">Indigo</button>
-			<button class="w3-button bg-green">Green</button>
-			<button class="w3-button bg-teal">Teal</button>
+			<div class="panel">
+				<div class="panel-heading">Various types of buttons. Using the base class .g-button</div>
+				<div class="panel-body">
+					<table class="gt-table">
+						<thead>
+							<col width="10%"><col>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Normal</th>
+								<td><button class="w3-button">Button</button></td>
+							</tr>
+							<tr>
+								<th>Button Borders</th>
+								<td><button class="w3-button border-black">Button</button></td>
+							</tr>
+							<tr>
+								<th>Disabled Button</th>
+								<td><button class="w3-button w3-disabled">Button</button></td>
+							</tr>
+							<tr>
+								<th>Button Colors</th>
+								<td>
+									<button class="w3-button bg-red">Red</button>
+									<button class="w3-button bg-green">Green</button>
+									<button class="w3-button bg-blue">Blue</button>
+									<button class="w3-button bg-black">Black</button>
+									<button class="w3-button bg-pink">Pink</button>
+									<button class="w3-button bg-teal">Teal</button>
+									
+									<button class="w3-button bg-indigo">Indigo</button>
+									<button class="w3-button bg-brown">Brown</button>
+									<button class="w3-button bg-orange">Orange</button>
+									<button class="w3-button bg-cyan">Cyan</button>
+									<button class="w3-button bg-purple">Purple</button>
+									<button class="w3-button bg-gray">Gray</button>
 
-			<h2>Hover Colors</h2>
-			<button class="w3-button bg-black bg-hover-white">White</button>
-			<button class="w3-button bg-black bg-hover-red">Red</button>
-			<button class="w3-button bg-black bg-hover-purple">Purple</button>
-			<button class="w3-button bg-black bg-hover-aqua">Aqua</button>
-			<button class="w3-button bg-black bg-hover-blue">Blue</button>
-			<button class="w3-button bg-black bg-hover-green">Green</button>
-			<button class="w3-button bg-black bg-hover-teal">Teal</button>
+									<button class="w3-button bg-yellow">Yellow</button>
+									<button class="w3-button bg-lime">Lime</button>
+									<button class="w3-button bg-khaki">Khaki</button>
+									<button class="w3-button bg-light-gray">Light Gray</button>
+									<button class="w3-button bg-sand">Sand</button>
+									<button class="w3-button bg-aqua">Aqua</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Button Border Colors</th>
+								<td>
+									<button class="w3-button border-red">Red</button>
+									<button class="w3-button border-green">Green</button>
+									<button class="w3-button border-blue">Blue</button>
+									<button class="w3-button border-black">Black</button>
+									<button class="w3-button border-pink">Pink</button>
+									<button class="w3-button border-teal">Teal</button>
+									
+									<button class="w3-button border-indigo">Indigo</button>
+									<button class="w3-button border-brown">Brown</button>
+									<button class="w3-button border-orange">Orange</button>
+									<button class="w3-button border-cyan">Cyan</button>
+									<button class="w3-button border-purple">Purple</button>
+									<button class="w3-button border-gray">Gray</button>
 
-			<h2>Button Shapes</h2>
-			<button class="w3-button bg-black">Normal</button>
-			<button class="w3-button bg-black w3-round">Round</button>
-			<button class="w3-button bg-black w3-round-large">Rounder</button>
-			<button class="w3-button bg-black w3-round-xlarge">and Rounder</button>
-			<button class="w3-button bg-black w3-round-xxlarge">and Rounder</button>
-			</p>
+									<button class="w3-button border-yellow">Yellow</button>
+									<button class="w3-button border-lime">Lime</button>
+									<button class="w3-button border-khaki">Khaki</button>
+									<button class="w3-button border-light-gray">Light Gray</button>
+									<button class="w3-button border-sand">Sand</button>
+									<button class="w3-button border-aqua">Aqua</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Hover Colors</th>
+								<td>
+									<button class="w3-button bg-hover-red">Red</button>
+									<button class="w3-button bg-hover-green">Green</button>
+									<button class="w3-button bg-hover-blue">Blue</button>
+									<button class="w3-button bg-hover-black">Black</button>
+									<button class="w3-button bg-hover-pink">Pink</button>
+									<button class="w3-button bg-hover-teal">Teal</button>
+									
+									<button class="w3-button bg-hover-indigo">Indigo</button>
+									<button class="w3-button bg-hover-brown">Brown</button>
+									<button class="w3-button bg-hover-orange">Orange</button>
+									<button class="w3-button bg-hover-cyan">Cyan</button>
+									<button class="w3-button bg-hover-purple">Purple</button>
+									<button class="w3-button bg-hover-gray">Gray</button>
 
-			<h2>Button Sizes</h2>
-			<button class="w3-button bg-black w3-tiny">Tiny</button>
-			<button class="w3-button bg-black w3-small">Small</button>
-			<button class="w3-button bg-black w3-medium">Medium</button>
-			<button class="w3-button bg-black w3-large">Large</button>
-			<button class="w3-button bg-black w3-xlarge">xLarge</button>
-			<button class="w3-button bg-black w3-xxlarge">XXLarge</button>
-			<button class="w3-button bg-black w3-xxxlarge">XXXLarge</button>
-			<button class="w3-button bg-black w3-jumbo">Jumbo</button>
-
-			<h2>Button Borders</h2>
-			<button class="w3-button bg-white w3-border">Button</button>
-			<button class="w3-button bg-white w3-border border-blue">Button</button>
-			<button class="w3-button bg-yellow w3-border">Button</button>
-			<button class="w3-button bg-white w3-border border-red w3-round-large">Button</button>
-
-			<h2>Full-width Buttons</h2>
-			<p><button class="w3-button w3-block bg-black">Button</button></p>
-			<p><button class="w3-button w3-block bg-teal">Button</button></p>
-			<p><button class="w3-button w3-block bg-red w3-left-align">Button</button></p>
-
-			<h2>Disabled Buttons</h2>
-			<button class="w3-button bg-teal">Button</button>
-			<button class="w3-button bg-teal w3-disabled">Disabled</button>
-			<input type="button" class="w3-button bg-black" value="Button">
-			<input type="button" class="w3-button bg-black" value="Disabled" disabled="">
+									<button class="w3-button bg-hover-yellow">Yellow</button>
+									<button class="w3-button bg-hover-lime">Lime</button>
+									<button class="w3-button bg-hover-khaki">Khaki</button>
+									<button class="w3-button bg-hover-light-gray">Light Gray</button>
+									<button class="w3-button bg-hover-sand">Sand</button>
+									<button class="w3-button bg-hover-aqua">Aqua</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Button Shapes</th>
+								<td>
+									<button class="w3-button w3-round">Round</button>
+									<button class="w3-button w3-round-large">Rounder</button>
+									<button class="w3-button w3-round-xlarge">and Rounder</button>
+									<button class="w3-button w3-round-xxlarge">and Rounder</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Button Sizes</th>
+								<td>
+									<button class="w3-button w3-tiny">Tiny</button>
+									<button class="w3-button w3-small">Small</button>
+									<button class="w3-button w3-medium">Medium</button>
+									<button class="w3-button w3-large">Large</button>
+									<button class="w3-button w3-xlarge">xLarge</button>
+									<button class="w3-button w3-xxlarge">XXLarge</button>
+									<button class="w3-button w3-xxxlarge">XXXLarge</button>
+									<button class="w3-button w3-jumbo">Jumbo</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Full-width Buttons</th>
+								<td>
+									<button class="w3-button w3-block bg-pink">Button</button>
+								</td>
+							</tr>
+							<tr>
+								<th>Adevenced</th>
+								<td>
+									<button class="w3-button bg-blue bg-hover-teal w3-round-large w3-small">Button</button>
+									<button class="w3-button bg-indigo bg-hover-purple w3-round-large w3-large">Button</button>
+									<button class="w3-button bg-pink bg-hover-brown w3-round-xlarge w3-xlarge">Button</button>
+									<button class="w3-button bg-green bg-hover-purple w3-round-xxlarge w3-xxlarge">Button</button>
+									<button class="w3-button bg-white bg-hover-teal w3-round-xlarge w3-xlarge border-teal">Button</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 
 	    </article>
     </section>

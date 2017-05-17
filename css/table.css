@@ -12,14 +12,14 @@
 
 .gt-table > thead > tr > th,
 .gt-table > tbody > tr > th {
-	padding: 15px 0;
-	text-align: center;
+	padding: 8px;
+	text-align: left;
 	background: #e9f1f3; 
 }
 .gt-table > thead > tr > td,
 .gt-table > tbody > tr > td {
-	padding: 10px 0;
-	text-align: center;
+	padding: 8px;
+	/*text-align: center;*/
 	background: #fff; 
 }
 

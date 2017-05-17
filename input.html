@@ -96,100 +96,139 @@
 		</aside>
 
 	    <article id="contents">
-			<h1>Input</h1>
-			<p>gashboard provides the following classes for buttons</p>
+			<h1>Forms</h1>
 			
-			<h2>Forms</h2>
 
-			<div class="panel">
-				<div class="panel-heading">Basic Form Elements</div>
-				<div class="panel-body">
-					<form>
-						<p>
-							<label class="text-gray">Name</label>
-							<input class="w3-input" type="text" required="">
-						</p>
-						<p class="w3-padding-10">
-							<label class="text-gray">Email</label>
-							<input class="w3-input" type="text" required="">
-						</p>
-						<p class="w3-padding-10">
-							<label class="text-gray">Text area</label>
-							<textarea class="w3-input"></textarea>
-						</p>
-						<div class="gt-row w3-padding-10">
-							<div class="gt-col gt-l6">
-								<input id="milk" type="checkbox" checked="checked">
-								<label for="milk">Milk</label>
-								<br>
-								<input id="sugar" type="checkbox">
-								<label for="sugar">Sugar</label>
-								<br>
-								<input id="lemon" class="w3-check" type="checkbox" disabled="">
-								<label for="lemon">Lemon (Disabled)</label>
+
+			<div class="gt-row">
+				<div class="gt-col gt-l6">
+					<div class="panel">
+						<div class="panel-heading">Basic Form Elements</div>
+						<div class="panel-body">
+							<form>
+								<p>
+									<label class="text-gray">Name</label>
+									<input class="w3-input" type="text" required="">
+								</p>
+								<p class="w3-padding-10">
+									<label class="text-gray">Email</label>
+									<input class="w3-input" type="text" required="">
+								</p>
+								<p class="w3-padding-10">
+									<label class="text-gray">Text area</label>
+									<textarea class="w3-input"></textarea>
+								</p>
+								<div class="gt-row w3-padding-10">
+									<div class="gt-col gt-l6">
+										<input id="milk" type="checkbox" checked="checked">
+										<label for="milk">Milk</label>
+										<br>
+										<input id="sugar" type="checkbox">
+										<label for="sugar">Sugar</label>
+										<br>
+										<input id="lemon" class="w3-check" type="checkbox" disabled="">
+										<label for="lemon">Lemon (Disabled)</label>
+									</div>
+
+									<div class="gt-col gt-l6">
+										<input id="male" type="radio" name="gender" value="male" checked="">
+										<label for="male">Male</label>
+										<br>
+										<input id="female" type="radio" name="gender" value="female">
+										<label for="female">Female</label>
+										<br>
+										<input id="unknown" type="radio" name="gender" value="" disabled="">
+										<label for="unknown">Don't know (Disabled)</label>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="panel-footer w3-right-align">
+							<button type="button" class="w3-btn w3-padding bg-black">Cancel</button>
+							<button type="button" class="w3-btn w3-padding bg-red">Send</button>
+						</div>
+					</div>
+				</div>
+				<div class="gt-col gt-l6">
+					<div class="panel">
+						<div class="panel-heading">input groups</div>
+						<div class="panel-body">
+							<div class="w3-input-group">
+								<input type="text" class="w3-input" placeholder="Search...">
+								<span class="input-group-btn">
+									<button type="button" class="w3-button bg-white bg-hover-light-gray"><i class="fa fa-search"></i></button>
+								</span>
 							</div>
 
-							<div class="gt-col gt-l6">
-								<input id="male" type="radio" name="gender" value="male" checked="">
-								<label for="male">Male</label>
-								<br>
-								<input id="female" type="radio" name="gender" value="female">
-								<label for="female">Female</label>
-								<br>
-								<input id="unknown" type="radio" name="gender" value="" disabled="">
-								<label for="unknown">Don't know (Disabled)</label>
+							<div class="w3-input-group w3-margin-10">
+								<span class="input-group-addon">@</span>
+								<input type="text" class="w3-input" placeholder="Search...">
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<input type="text" class="w3-input" placeholder="Search...">
+								<span class="input-group-addon">@</span>
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<input type="text" class="w3-input" placeholder="Search...">
+								<span class="input-group-addon">.00</span>
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<span class="input-group-addon">@</span>
+								<input type="text" class="w3-input" placeholder="Search...">
+								<span class="input-group-addon">@</span>
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<span class="input-group-addon">$</span>
+								<input type="text" class="w3-input" placeholder="Search...">
+								<span class="input-group-addon">.00</span>
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<span class="input-group-addon fa fa-envelope"></span>
+								<input type="text" class="w3-input" placeholder="Email">
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<input type="text" class="w3-input" placeholder="">
+								<span class="input-group-addon fa fa-check"></span>
+							</div>
+
+							<div class="w3-input-group w3-margin-10">
+								<span class="input-group-addon">
+									<input type="checkbox">
+								</span>
+								<input type="text" class="w3-input" placeholder="">
+							</div>
+
+							<div class="w3-input-group">
+								<span class="input-group-addon">
+									<input type="radio">
+								</span>
+								<input type="text" class="w3-input" placeholder="">
 							</div>
 						</div>
-						<div class="w3-padding-16">
-							<button type="button" class="w3-btn w3-padding bg-teal" style="width:120px">Send</button>
-						</div>
-					</form>
-
-					
-
+					</div>
 				</div>
 			</div>
 
-			<h2>Input Groups</h2>
-			<div class="panel">
-				<div class="panel-heading">input groups</div>
-				<div class="panel-body">
-					<div class="w3-input-group">
-						<input type="text" class="w3-input" placeholder="Search...">
-						<span class="input-group-btn">
-							<button type="button" class="w3-button bg-white bg-hover-light-gray"><i class="fa fa-search"></i></button>
-						</span>
+			<div class="gt-row">
+				<div class="gt-col gt-l6">
+					<div class="panel">
+						<div class="panel-heading">Select Menu</div>
+						<div class="panel-body">
+							<select class="w3-select" name="option">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
 					</div>
-
-					<div class="w3-input-group w3-margin-10">
-						<span class="input-group-addon">@</span>
-						<input type="text" class="w3-input" placeholder="Search...">
-					</div>
-
-					<div class="w3-input-group w3-margin-10">
-						<input type="text" class="w3-input" placeholder="Search...">
-						<span class="input-group-addon">@</span>
-					</div>
-
-					<div class="w3-input-group">
-						<span class="input-group-addon">@</span>
-						<input type="text" class="w3-input" placeholder="Search...">
-						<span class="input-group-addon">@</span>
-					</div>
-				</div>
-			</div>
-
-			<h2>Select Menu</h2>
-			<div class="panel">
-				<div class="panel-heading">Select Menu</div>
-				<div class="panel-body">
-					<select class="w3-select" name="option">
-						<option value="" disabled selected>1</option>
-						<option value="1">2</option>
-						<option value="2">3</option>
-						<option value="3">4</option>
-						<option value="3">5</option>
-					</select>
 				</div>
 			</div>
 			

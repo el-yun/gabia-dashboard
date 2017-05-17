@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>gashboard</title>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
+<!-- Font Awesome(iconic font) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!-- Web Font(notosans) -->
+<link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
+<!-- reset css -->
+<link href='css/reset.css' rel='stylesheet' type='text/css'>
+<link href='css/global.css' rel='stylesheet' type='text/css'>
+<link href='css/navbar.css' rel='stylesheet' type='text/css'>
+<link href='css/hamburger.css' rel='stylesheet' type='text/css'>
+<link href='css/sidebar.css' rel='stylesheet' type='text/css'>
+<link href='css/layout.css' rel='stylesheet' type='text/css'>
+<link href='css/input.css' rel='stylesheet' type='text/css'>
+<link href='css/table.css' rel='stylesheet' type='text/css'>
+<link href='css/paging.css' rel='stylesheet' type='text/css'>
+<link href='css/grid.css' rel='stylesheet' type='text/css'>
+<link href='css/colors.css' rel='stylesheet' type='text/css'>
+<link href='css/padding.css' rel='stylesheet' type='text/css'>
+<link href='css/buttons.css' rel='stylesheet' type='text/css'>
+<link href='css/panel.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<div id="wrap">
+	
+	<header>
+		<nav class="navbar">
+			<div class="gt-container">
+				<a class="navbar-project-name" href="#">gashboard v1.0</a>
+				<ul class="navbar-nav">
+					<li><a href="#">user name</a></li>
+					<li><a href="#">notice</a></li>
+					<li><a href="#">logout</a></li>
+				</ul>
+			</div>
+			<a href="javascript:void(0);" class="hamburger">
+				<div class="icon"></div>
+			</a>
+		</nav>
+	</header>
+
+	<section id="container">
+		
+		<aside id="sidebar">
+			<ul class="sidebar-nav">
+				<li class="w3-input-group" style="padding:15px">
+					<input type="text" class="w3-input" placeholder="Search...">
+					<span class="input-group-btn">
+						<button type="button" class="w3-button bg-white bg-hover-light-gray"><i class="fa fa-search"></i></button>
+					</span>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-dashboard fa-fw"></i> management</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Flot Charts</a></li>
+						<li><a href="#">Morris.js Charts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+				</li>
+				<li>
+					<a href="#" class="active"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+					<ul class="sidebar-nav nav-second-level">
+						<li><a href="#">Second Level Item</a></li>
+						<li><a href="#">Second Level Item</a></li>
+						<li>
+							<a href="#">Third Level <span class="fa arrow"></span></a>
+							<ul class="sidebar-nav nav-third-level">
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+								<li><a href="#">Third Level Item</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+
+	    <article id="contents">
+
+			<h1>Tables</h1>
+			
+			<h2>제 19대 대선 개표단위별 개표현황</h2>
+			<!-- <table class="gt-table">
+				<caption>gtris table</caption>
+				<colgroup>
+					<col><col><col><col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">No.</th>
+						<th scope="col">서비스 명</th>
+						<th scope="col">서비스 가격</th>
+						<th scope="col">최종 수정일</th>
+						<th scope="col">판매 여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11036</td>
+						<td>ATY_무료 체험(무료 체험)</td>
+						<td>0원</td>
+						<td>2017-03-29 15:29:29</td>
+						<td>Y</td>
+					</tr>
+				</tbody>
+			</table> -->
+
+			<!-- <table class="gt-table">
+				<caption>gtris table</caption>
+				<colgroup>
+					<col><col><col><col><col><col><col><col><col><col><col><col><col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="13">서울</th>
+					</tr>
+					<tr>
+						<th scope="col">문재인</th>
+						<th scope="col">안철수</th>
+						<th scope="col">홍준표</th>
+						<th scope="col">유승민</th>
+						<th scope="col">심상정</th>
+						<th scope="col">조원진</th>
+						<th scope="col">김민찬</th>
+						<th scope="col">장성민</th>
+						<th scope="col">김선동</th>
+						<th scope="col">윤홍식</th>
+						<th scope="col">이재오</th>
+						<th scope="col">이경희</th>
+						<th scope="col">오영국</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2,781,345</td>
+						<td>1,492,767</td>
+						<td>1,365,285</td>
+						<td>476,973</td>
+						<td>425,459</td>
+						<td>9,987</td>
+						<td>3,950</td>
+						<td>3,554</td>
+						<td>3,416</td>
+						<td>2,177</td>
+						<td>1,938</td>
+						<td>1,277</td>
+						<td>789</td>
+					</tr>
+				</tbody>
+			</table> -->
+
+			<!-- <div class="gt-row">
+				<div class="gt-col gt-l4">
+					<table class="gt-table">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4">서울</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="font-weight:bold">문재인</td>
+								<td style="font-weight:bold">민주당</td>
+								<td style="font-weight:bold">42.3%</td>
+								<td style="font-weight:bold">2,781,345</td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>22.7%</td>
+								<td>1,492,767</td>
+							</tr>
+							<tr>
+								<td>홍준표</td>
+								<td>한국당</td>
+								<td>20.8%</td>
+								<td>1,365,285</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>7.3%</td>
+								<td>476,973</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>6.5%</td>
+								<td>425,459</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.2%</td>
+								<td>9,987</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>3,950</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.1%</td>
+								<td>3,554</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.1%</td>
+								<td>3,416</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.0%</td>
+								<td>2,177</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>1,938</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>1,277</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>789</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="gt-col gt-l4">
+					<table class="gt-table">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4">부산</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="font-weight:bold">문재인</td>
+								<td style="font-weight:bold">민주당</td>
+								<td style="font-weight:bold">42.3%</td>
+								<td style="font-weight:bold">2,781,345</td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>22.7%</td>
+								<td>1,492,767</td>
+							</tr>
+							<tr>
+								<td>홍준표</td>
+								<td>한국당</td>
+								<td>20.8%</td>
+								<td>1,365,285</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>7.3%</td>
+								<td>476,973</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>6.5%</td>
+								<td>425,459</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.2%</td>
+								<td>9,987</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>3,950</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.1%</td>
+								<td>3,554</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.1%</td>
+								<td>3,416</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.0%</td>
+								<td>2,177</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>1,938</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>1,277</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>789</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="gt-col gt-l4">
+					<table class="gt-table">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4" style="background:#d5141d; color:#fff">대구</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="font-weight:bold">홍준표</td>
+								<td style="font-weight:bold">한국당</td>
+								<td style="font-weight:bold">45.4%</td>
+								<td style="font-weight:bold">714,205</td>
+							</tr>
+							<tr>
+								<td>문재인</td>
+								<td>민주당</td>
+								<td>21.8%</td>
+								<td>342,620</td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>15.0%</td>
+								<td>235,757</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>12.6%</td>
+								<td>198,459</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>4.7%</td>
+								<td>74,440</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.3%</td>
+								<td>4,057</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>1,501</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.1%</td>
+								<td>986</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.1%</td>
+								<td>804</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.0%</td>
+								<td>563</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>401</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>324</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>259</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div> -->
+
+			<div class="gt-row">
+				<div class="gt-col gt-l4">
+					<table class="gt-table">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4" class="bg-blue w3-border-0">서울</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>문재인</strong></td>
+								<td><strong>민주당</strong></td>
+								<td><strong>42.3%</strong></td>
+								<td><strong>2,781,345</strong></td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>22.7%</td>
+								<td>1,492,767</td>
+							</tr>
+							<tr>
+								<td>홍준표</td>
+								<td>한국당</td>
+								<td>20.8%</td>
+								<td>1,365,285</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>7.3%</td>
+								<td>476,973</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>6.5%</td>
+								<td>425,459</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.2%</td>
+								<td>9,987</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>3,950</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.1%</td>
+								<td>3,554</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.1%</td>
+								<td>3,416</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.0%</td>
+								<td>2,177</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>1,938</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>1,277</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>789</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="gt-col gt-l4">
+					<table class="gt-table">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4" class="bg-blue w3-border-0">부산</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>문재인</strong></td>
+								<td><strong>민주당</strong></td>
+								<td><strong>38.7%</strong></td>
+								<td><strong>872,127</strong></td>
+							</tr>
+							<tr>
+								<td>홍준표</td>
+								<td>한국당</td>
+								<td>32.0%</td>
+								<td>720,484</td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>16.8%</td>
+								<td>378,907</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>7.2%</td>
+								<td>162,480</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>4.9%</td>
+								<td>109,329</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.1%</td>
+								<td>2,651</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>2,156</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.1%</td>
+								<td>1,316</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.0%</td>
+								<td>1,041</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.0%</td>
+								<td>981</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>496</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>465</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>276</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="gt-col gt-l4">
+					<table class="gt-table w3-padding">
+						<caption>gtris table</caption>
+						<colgroup>
+							<col><col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="4" class="bg-red w3-border-0">대구</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>홍준표</strong></td>
+								<td><strong>한국당</strong></td>
+								<td><strong>45.4%</strong></td>
+								<td><strong>714,205</strong></td>
+							</tr>
+							<tr>
+								<td>문재인</td>
+								<td>민주당</td>
+								<td>21.8%</td>
+								<td>342,620</td>
+							</tr>
+							<tr>
+								<td>안철수</td>
+								<td>국민의당</td>
+								<td>15.0%</td>
+								<td>235,757</td>
+							</tr>
+							<tr>
+								<td>유승민</td>
+								<td>바른정당</td>
+								<td>12.6%</td>
+								<td>198,459</td>
+							</tr>
+							<tr>
+								<td>심상정</td>
+								<td>정의당</td>
+								<td>4.7%</td>
+								<td>74,440</td>
+							</tr>
+							<tr>
+								<td>조원진</td>
+								<td>새누리당</td>
+								<td>0.3%</td>
+								<td>4,057</td>
+							</tr>
+							<tr>
+								<td>김민찬</td>
+								<td>무소속</td>
+								<td>0.1%</td>
+								<td>1,501</td>
+							</tr>
+							<tr>
+								<td>윤홍식</td>
+								<td>홍익당</td>
+								<td>0.1%</td>
+								<td>986</td>
+							</tr>
+							<tr>
+								<td>김선동</td>
+								<td>민중연합</td>
+								<td>0.1%</td>
+								<td>804</td>
+							</tr>
+							<tr>
+								<td>장성민</td>
+								<td>대통합당</td>
+								<td>0.0%</td>
+								<td>563</td>
+							</tr>
+							<tr>
+								<td>이경희</td>
+								<td>한국국민</td>
+								<td>0.0%</td>
+								<td>401</td>
+							</tr>
+							<tr>
+								<td>이재오</td>
+								<td>늘푸른당</td>
+								<td>0.0%</td>
+								<td>324</td>
+							</tr>
+							<tr>
+								<td>오영국</td>
+								<td>경제애국</td>
+								<td>0.0%</td>
+								<td>259</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="gt-paging">
+				<span class="gt-paging-inner">
+				<a href="#" class="gt-paging-nav gt-paging-first"><span class="fa fa-angle-double-left"></span></a>
+				<a href="#" class="gt-paging-nav gt-paging-prev"><span class="fa fa-angle-left"></span></a>
+				<a href="#" class="gt-paging-num">1</a>
+				<a href="#" class="gt-paging-num">2</a>
+				<a href="#" class="gt-paging-num">3</a>
+				<em class="gt-paging-num">4</em>
+				<a href="#" class="gt-paging-num">5</a>
+				<a href="#" class="gt-paging-num">6</a>
+				<a href="#" class="gt-paging-nav gt-paging-next"><span class="fa fa-angle-right"></span></a>
+				<a href="#" class="gt-paging-nav gt-paging-last"><span class="fa fa-angle-double-right"></span></a>
+				</span>
+			</div>
+
+
+
+			<h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">역대 선거 투표율</h2>
+			<table class="gt-table">
+			<caption></caption>
+			<thead>
+			<tr>
+			<th>&nbsp;</th>
+			<th scope="col">전국</th>
+			<th scope="col">서울</th>
+			<th scope="col">부산</th>
+			<th scope="col">대구</th>
+			<th scope="col">인천</th>
+			<th scope="col">광주</th>
+			<th scope="col">대전</th>
+			<th scope="col">울산</th>
+			<th scope="col">세종</th>
+			<th scope="col">경기</th>
+			<th scope="col">강원</th>
+			<th scope="col">충북</th>
+			<th scope="col">충남</th>
+			<th scope="col">전북</th>
+			<th scope="col">전남</th>
+			<th scope="col">경북</th>
+			<th scope="col">경남</th>
+			<th scope="col">제주</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<th scope="row"><strong>19</strong>대 대선</th>
+			<td><strong>77.2</strong></td>
+			<td>78.6</td>
+			<td>76.7</td>
+			<td>77.4</td>
+			<td>75.5</td>
+			<td class="voter_max">
+			<strong>82.0</strong></td>
+			<td>77.5</td>
+			<td>79.2</td>
+			<td>80.7</td>
+			<td>77.1</td>
+			<td>74.3</td>
+			<td>74.8</td>
+			<td>72.4</td>
+			<td>79.0</td>
+			<td>78.8</td>
+			<td>76.1</td>
+			<td>77.8</td>
+			<td class="voter_min">
+			<em>72.3</em>
+			</td>
+			</tr>
+			<tr>
+			<th scope="row"><strong>20</strong>대 총선</th>
+			<td><strong>58.0</strong></td>
+			<td>59.8</td>
+			<td>55.4</td>
+			<td class="voter_min">
+			<em>54.8</em>
+			</td>
+			<td>55.6</td>
+			<td>61.6</td>
+			<td>58.6</td>
+			<td>59.2</td>
+			<td>63.5</td>
+			<td>57.5</td>
+			<td>57.7</td>
+			<td>57.3</td>
+			<td>55.5</td>
+			<td>62.9</td>
+			<td class="voter_max">
+			<strong>63.7</strong></td>
+			<td>56.7</td>
+			<td>57.0</td>
+			<td>57.2</td>
+			</tr>
+			<tr>
+			<th scope="row"><strong>06</strong>회 지선</th>
+			<td><strong>56.8</strong></td>
+			<td>58.6</td>
+			<td>55.6</td>
+			<td class="voter_min">
+			<em>52.3</em>
+			</td>
+			<td>53.7</td>
+			<td>57.1</td>
+			<td>54.0</td>
+			<td>56.1</td>
+			<td>62.7</td>
+			<td>53.3</td>
+			<td>62.2</td>
+			<td>58.8</td>
+			<td>55.7</td>
+			<td>59.9</td>
+			<td class="voter_max">
+			<strong>65.6</strong></td>
+			<td>59.5</td>
+			<td>59.8</td>
+			<td>62.8</td>
+			</tr>
+			<tr>
+			<th scope="row"><strong>18</strong>대 대선</th>
+			<td><strong>75.8</strong></td>
+			<td>75.1</td>
+			<td>76.2</td>
+			<td>79.7</td>
+			<td>74.0</td>
+			<td class="voter_max">
+			<strong>80.4</strong></td>
+			<td>76.5</td>
+			<td>78.4</td>
+			<td>74.1</td>
+			<td>75.0</td>
+			<td>73.8</td>
+			<td>75.0</td>
+			<td class="voter_min">
+			<em>72.9</em>
+			</td>
+			<td>77.0</td>
+			<td>76.5</td>
+			<td>78.2</td>
+			<td>77.0</td>
+			<td>73.3</td>
+			</tr>
+			<tr>
+			<th scope="row"><strong>17</strong>대 대선</th>
+			<td><strong>63.0</strong></td>
+			<td>62.9</td>
+			<td>62.1</td>
+			<td>66.8</td>
+			<td class="voter_min">
+			<em>60.3</em>
+			</td>
+			<td>64.3</td>
+			<td>61.9</td>
+			<td>64.6</td>
+			<td>0.0</td>
+			<td>61.2</td>
+			<td>62.6</td>
+			<td>61.3</td>
+			<td class="voter_min">
+			<em>60.3</em>
+			</td>
+			<td>67.2</td>
+			<td>64.7</td>
+			<td class="voter_max">
+			<strong>68.5</strong>
+			</td>
+			<td>64.1</td>
+			<td>60.9</td>
+			</tr>
+			</tbody>
+			</table>
+			
+
+
+
+			<h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">gashboard란 무엇인가?</h2>
+			      <p>Nuxt.js는 범용 Vue.js 애플리케이션을 만들기 위한 프레임워크로, 주요 범위는 클라이언트/서버 배포를 추상화하면서 <strong>UI 렌더링</strong> 을 하는 것입니다.</p>
+			      <p>우리의 목표는 Nuxt.js를 기반 프로젝트로 하거나 Node.js 기반의 프로젝트에 추가해서 사용할 수 있도록 충분히 유연한 프레임워크를 만드는 것입니다.</p>
+			      <p>Nuxt.js는 더 즐거운 <strong>서버 사이드 렌더링</strong> Vue.js 애플리케이션 개발을 위해 필요한 모든 설정들이 미리 준비되어 있습니다.</p>
+			      <p>또한 우리는 <em>nuxt generate</em> 라고 부르는 배포 옵션을 제공하며, 이는 Vue.js 애플리케이션을 <strong>정적으로 생성</strong> 하는 옵션입니다.
+			      이 옵션이 마이크로 서비스를 지향하는 웹 애플리케이션 개발의 다음 단계가 될 수 있다고 생각합니다.</p>
+			      <p>Nuxt.js 프레임워크는 비동기 데이터, 미들웨어, 레이아웃 등과 같이 클라이언트 측과 서버 측 사이에서 개발하는데 도움되는 많은 기능을 제공합니다.</p>
+			      <h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">어떻게 동작합니까?</h2>
+			      <p>Nuxt.js는 범용 Vue.js 애플리케이션을 만들기 위한 프레임워크로, 주요 범위는 클라이언트/서버 배포를 추상화하면서 <strong>UI 렌더링</strong> 을 하는 것입니다.</p>
+			      <p>우리의 목표는 Nuxt.js를 기반 프로젝트로 하거나 Node.js 기반의 프로젝트에 추가해서 사용할 수 있도록 충분히 유연한 프레임워크를 만드는 것입니다.</p>
+			      <p>Nuxt.js는 더 즐거운 <strong>서버 사이드 렌더링</strong> Vue.js 애플리케이션 개발을 위해 필요한 모든 설정들이 미리 준비되어 있습니다.</p>
+			      <p>또한 우리는 <em>nuxt generate</em> 라고 부르는 배포 옵션을 제공하며, 이는 Vue.js 애플리케이션을 <strong>정적으로 생성</strong> 하는 옵션입니다.
+			      이 옵션이 마이크로 서비스를 지향하는 웹 애플리케이션 개발의 다음 단계가 될 수 있다고 생각합니다.</p>
+			      <p>Nuxt.js 프레임워크는 비동기 데이터, 미들웨어, 레이아웃 등과 같이 클라이언트 측과 서버 측 사이에서 개발하는데 도움되는 많은 기능을 제공합니다.</p>
+			      <h2 id="nuxt-js란-무엇인가-" style="font-size: 34px; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #dbdfe1; margin: 30px 0;">특징</h2>
+			     	<ul>
+			<li>Vue 파일 작성</li>
+			<li>코드 분할 자동화</li>
+			<li>서버 사이드 렌더링</li>
+			<li>비동기 데이터 기반의 강력한 라우팅 시스템</li>
+			<li>정적 파일 전송</li>
+			<li>ES6/ES7 지원</li>
+			<li>JS &amp; CSS 코드 번들링 및 압축</li>
+			<li>HTML head 태그 관리</li>
+			<li>개발 단계에서 핫 리로딩 사용하기</li>
+			<li>전 처리기 지원: SASS, LESS, Stylus 등</li>
+			</ul>
+
+
+
+
+	    </article>
+
+    </section>
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

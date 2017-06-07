@@ -11,6 +11,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="css/layout.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+	.show { display:block; }
+	.hide { display: none; !important}
+</style>
 </head>
 <body>
 	<?php $page = 'dropdown'; ?>
@@ -107,11 +111,13 @@
 						</div>
 					</div>
 				</div>
-
-						
-
 			</article>
 		</section>
 	</div>
+	<script src="js/dashboard.js"></script>
+	<script>
+		var dashboard = new Dashboard.dropdown('w3-dropdown', 'click');
+		console.log(dashboard);
+	</script>
 </body>
 </html>

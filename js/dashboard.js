@@ -9,9 +9,8 @@
 				@ Event : Dropdown  이 발생할 이벤트
 				@ Prefix :  -Click (타겟 클래스) , -Content( Dropdown될 대상 )
 			*/
-			dropdown : function(prefix, event){
+			dropdown : function(prefix){
 				try{
-					if(event == "click"){
 						var className = prefix + "-click";
 						var childName = prefix + "-content";
 						if(typeof document.getElementsByClassName(className) != 'undefined'){
@@ -24,14 +23,11 @@
 								}, false);
 							}
 						}
-
-					}
 				}
 				catch (e)
 				{
 					alert(e.number + " : " + e.message);
 				}
-
 			},
 			/*
 				Tab
@@ -73,30 +69,30 @@
 				@ (param) cols : 칼럼 이름(순서대로)
 				@ (param) len :  출력할 데이터 크기
 			*/
-		table : function(target, data, cols, len){
-			try{
+		table : function(target, data, cols, colsName, len){
+			try{				
 				if(typeof len == 'undefined') len = 20;
 				var dataTable = [];
 				if(typeof cols == 'undefined' || !cols){
-					dataTable = data;
-					cols = Object.keys(data[0]);
+						dataTable = data;
+						cols = Object.keys(data[0]);
 				} else {
-					data.forEach(function(record, i){
+					for(var index in data) { 
 						var tmp = [];
-						record.forEach(function(val, col){
-							if(cols.indexOf(col) < 0) return;
-							else {
-								tmp[col] = val;
-							}
-						});
-						dataTable[i] = tmp;
-						if(i >= len) return false;
-					});
+						var record = data[index];
+						for(var col in record){
+							var val = record[col];
+							if(cols.indexOf(col) > -1)	tmp[col] = val;
+						}
+					}
+					dataTable[index] = tmp;
+					if(index >= len) return false;
 				}
+				if(typeof colsName == 'undefined') colsName = cols;
 				var table = document.createElement( "TABLE" ); 
 				var tbody = document.createElement("TBODY");
 				var thead = document.createElement( "TR" ); 
-				cols.forEach(function(colName, i){
+				colsName.forEach(function(colName, i){
 					var th = document.createElement( "TH" );
 					th.innerHTML = colName;
 					thead.appendChild(th);

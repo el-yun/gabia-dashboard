@@ -117,7 +117,6 @@
 	<script src="js/dashboard.js"></script>
 	<script>
 		var dashboard = new Dashboard.dropdown('w3-dropdown', 'click');
-		console.log(dashboard);
 	</script>
 </body>
 </html>

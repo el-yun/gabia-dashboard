@@ -18,10 +18,13 @@
 		<header>
 			<?php include("include/header.php") ?>
 		</header>
-
+		<div class="panel-body" id="table">
+		</div>
+		<div class="panel-body" id="table2">
+		</div>
 		<section id="container">
 			<?php include("include/sidebar.php") ?>
-
+			
 			<article id="contents">
 				<h1>Tables</h1>
 
@@ -823,6 +826,12 @@
 						</table>
  -->
 
-
+<script>
+var d = [{"id":"63","artifactId":"www","groupId":"com.gabia.deploytest","name":"\ubc30\ud3ec\uc11c\ube44\uc2a42","repositoryPath":"deploy\/trunk","repositoryType":"SVN","repositoryURL":"svn:\/\/svn.gabia.com","description":"\ud504\ub85c\uc81d\ud2b8\ub97c \ubc30\ud3ec\ud558\ub294 \uc11c\ube44\uc2a4 \uc785\ub2c8\ub2e4.!!","uploadVersionId":"215","uploadRevision":"172","repositoryId":"jhyoon","repositoryPassword":"dbswlghks5","createDate":"2014-12-03 16:13:08","modifyDate":"2017-01-19 14:20:25","encrypt":"N","encryptPatterns":"php|test","excludePatterns":"*.svn|*.test","old":"N","status":"I"},{"id":"77","artifactId":"jym_hosting","groupId":"jym_hosting","name":"\ud638\uc2a4\ud305 \ub370\ubaa8 \ud14c\uc2a4\ud2b8","repositoryPath":"hosting\/trunk","repositoryType":"SVN","repositoryURL":"svn:\/\/svn.gabia.com","description":"\uad6c \ud638\uc2a4\ud305 \ud14c\uc2a4\ud2b8","uploadVersionId":"174","uploadRevision":"3670","repositoryId":"leejw","repositoryPassword":"gkdldnjrtm777","createDate":"2014-12-03 16:13:11","modifyDate":"2014-12-23 21:03:34","encrypt":"S","encryptPatterns":"php|html|htm","excludePatterns":"*.svn","old":"N","status":"I"},{"id":"78","artifactId":"newsms","groupId":"newsms","name":"sms_real","repositoryPath":"sms\/new_sms","repositoryType":"SVN","repositoryURL":"svn:\/\/soldev.gabia.com","description":"sms_real","uploadVersionId":"176","uploadRevision":"1346","repositoryId":"leejw","repositoryPassword":"gkdldnjrtm777","createDate":"2014-12-03 16:13:13","modifyDate":"2015-01-06 11:03:38","encrypt":"S","encryptPatterns":"php|html|inc","excludePatterns":"*.svn","old":"N","status":"I"},{"id":"80","artifactId":"lhh_hosting","groupId":"lhh_hosting","name":"\ud638\uc2a4\ud305 \ud14c\uc2a4\ud2b8_\uc774\ud658\ud76c","repositoryPath":"hosting\/trunk","repositoryType":"SVN","repositoryURL":"svn:\/\/svn.gabia.com","description":"","uploadVersionId":"182","uploadRevision":"3682","repositoryId":"lhh","repositoryPassword":"3811","createDate":"2014-12-03 16:13:16","modifyDate":"2014-12-23 20:28:55","encrypt":"S","encryptPatterns":"php|html","excludePatterns":"*.svn","old":"N","status":"I"},{"id":"81","artifactId":"hosting","groupId":"hosting","name":"hosting.gabia.com","repositoryPath":"hosting\/trunk","repositoryType":"SVN","repositoryURL":"svn:\/\/svn.gabia.com","description":"hosting.gabia.com","uploadVersionId":"191","uploadRevision":"3711","repositoryId":"leejw","repositoryPassword":"gkdldnjrtm777","createDate":"2014-12-03 16:13:19","modifyDate":"2015-01-12 09:47:41","encrypt":"S","encryptPatterns":"php|inc|class","excludePatterns":"*.svn","old":"N","status":"I"},{"id":"83","artifactId":"test","groupId":"test","name":"smstest","repositoryPath":"sms\/new_sms","repositoryType":"SVN","repositoryURL":"svn:\/\/soldev.gabia.com","description":"smstest","uploadVersionId":"189","uploadRevision":"1343","repositoryId":"leejw","repositoryPassword":"gkdldnjrtm777","createDate":"2014-12-03 16:13:21","modifyDate":"2015-01-09 16:20:20","encrypt":"S","encryptPatterns":"php|php*","excludePatterns":"*.svn","old":"N","status":"I"},{"id":"89","artifactId":"hiworkstest","groupId":"hiworks","name":"hiworks","repositoryPath":"hiworks\/trunk\/groupware","repositoryType":"SVN","repositoryURL":"svn:\/\/soldev.gabia.com","description":"\ud558\uc774\uc6cd\uc2a4","uploadVersionId":"212","uploadRevision":"18889","repositoryId":"lhh","repositoryPassword":"3811","createDate":"2015-02-02 17:22:24","modifyDate":"2015-07-28 13:36:19","encrypt":"S","encryptPatterns":"php|php[1-9]|htm|html","excludePatterns":"*.svn","old":"Y","status":"I"},{"id":"95","artifactId":"smarthd-utube","groupId":"smarthd-utube","name":"smarthd-utube","repositoryPath":"smarthd\/trunk\/web_bw\/google-api-php-client","repositoryType":"SVN","repositoryURL":"svn:\/\/svn.gabia.com","description":"smarthd-utube","uploadVersionId":"","uploadRevision":"0","repositoryId":"leejw","repositoryPassword":"gkdldnjrtm777","createDate":"2015-08-04 14:04:02","modifyDate":"2015-08-04 14:04:02","encrypt":"N","encryptPatterns":"php|php[1-9]|htm|html","excludePatterns":"*.svn","old":"N","status":"I"}];
+var cols = ['id', 'artifactId', 'name'];
+var colname = ['ID', 'ArtifactID', '이름'];
+new Dashboard.table('w3-table','table', d, cols,  colname);
+new Dashboard.table('w3-table-all w3-hoverable','table2', d);
+</script>
 
 

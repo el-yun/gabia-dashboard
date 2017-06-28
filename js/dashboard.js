@@ -69,7 +69,7 @@
 				@ (param) cols : 칼럼 이름(순서대로)
 				@ (param) len :  출력할 데이터 크기
 			*/
-		table : function(target, data, cols, colsName, len){
+		table : function(className, target, data, cols, colsName, len){
 			try{				
 				if(typeof len == 'undefined') len = 20;
 				var dataTable = [];
@@ -109,7 +109,7 @@
 					tbody.appendChild( tr ); 
 				});
 				table.appendChild( tbody ); 
-				addClass(table, 'w3-table-all');
+				addClass(table, className);
 				document.getElementById(target).append(table);
 			}
 			catch(e)

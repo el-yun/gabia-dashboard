@@ -4,25 +4,36 @@
 (function(window){
 	// w3-dropdown-hover
 	var Dashboard = {
+			init : function(){
+				var object = document.getElementsByAttribute('gashboard-event');
+				for(var i = 0; i < object.length; i++){
+					var event = object[i].getAttribute('gashboard-event');
+					if(event == 'dropdown-click'){
+						new Dashboard.dropdown(object[i], 'click');
+					} else if(event == 'tabs'){
+						new Dashboard.tabs(object[i]);
+					}
+				}
+			},
 			/*
 				Dropdown
 				@ Event : Dropdown  이 발생할 이벤트
-				@ Prefix :  -Click (타겟 클래스) , -Content( Dropdown될 대상 )
+				@ 
 			*/
-			dropdown : function(prefix){
+			dropdown : function(obj, ev){
 				try{
-						var className = prefix + "-click";
-						var childName = prefix + "-content";
-						if(typeof document.getElementsByClassName(className) != 'undefined'){
-							var t = document.getElementsByClassName(className);
-							for(var i = 0; i < t.length; i += 1){
-								var _object = t[i];
-								_object.addEventListener("click", function(i, v) { 
-									var child = _object.querySelector('.' + childName);
-									toggleClass(child, 'w3-show');
-								}, false);
-							}
-						}
+						var _object = obj.getElementsByAttribute('gashboard-role');
+						var menu = obj.getElementsByRole('menu');
+						var content = obj.getElementsByRole('content');
+						menu.addEventListener(ev, function(v) { 
+							var parent = v.path[1];
+							var _content = parent.getElementsByRole('content');
+							toggleClass(_content, 'w3-show');
+						});
+						content.addEventListener('click', function(v) {
+							console.log(this);
+							removeClass(this, 'w3-show');
+						});
 				}
 				catch (e)
 				{
@@ -30,31 +41,23 @@
 				}
 			},
 			/*
-				Tab
+				Tabs
 				@ (param) prefix :  탭 화면을 감싸는 클래스 
 				@ prefix-menu : 탭 메뉴
 				@ prefix-content : 탭  화면
 			*/
-			tab : function(prefix){
+			tabs : function(obj){
 				try{
-					var className = prefix;
-					var menuName = prefix + "-menu";
-					var contentName = prefix + "-content";
-					if(typeof document.getElementsByClassName(className) != 'undefined'){
-							var t = document.getElementsByClassName(className);
-							for(var i = 0; i < t.length; i += 1){
-								var _o = t[i];
-								var _m = _o.querySelectorAll("." + menuName + " a");
-								_m.forEach(function(o_menu, k){
-									o_menu.addEventListener("click", function(e) { 
-											var _c = document.getElementById(e.target.href.split("#")[1]);
-											_c.parentElement.querySelectorAll("div.dashtab-content:not(.w3-hide)").forEach(function(_t){
-												addClass(_t, "w3-hide");
-											});
-											removeClass(_c, "w3-hide");
-									});
-								})
-							}
+					var menu = obj.getElementsByRole('menu');
+					for(var i = 0; i < menu.children.length; i += 1){
+						menu.children[i].addEventListener("click", function(e) { 
+							var t = this.href.split('#')[1];
+							var contents = e.path[2].getElementsByRoles('content');
+							contents.forEach(function(v, i){
+								removeClass(v, 'w3-hide');
+								if(v.getAttribute('id') != t) addClass(v, 'w3-hide');
+							});
+						});
 					}
 			}
 			catch(e)
@@ -122,6 +125,29 @@
 	function addClass(element, className) { element.className += " " + className; };
 	function removeClass(element, className) { var check = new RegExp("(\\s|^)" + className + "(\\s|$)"); element.className = element.className.replace(check, " ").trim(); };
 	function toggleClass(element, className) { var check = new RegExp("(\\s|^)" + className + "(\\s|$)"); if(check.test(element.className)){ element.className = element.className.replace(check, " ").trim(); } else { element.className += " " + className; } };
+
+	document.getElementsByAttribute = Element.prototype.getElementsByAttribute = function(attr) {
+		var nodeList = this.getElementsByTagName('*');
+		var nodeArray = [];
+		for (var i = 0, elem; elem = nodeList[i]; i++) {
+			if ( elem.getAttribute(attr) ) nodeArray.push(elem);
+		}
+		return nodeArray;
+	};	
+	Element.prototype.getElementsByRole = function(e){
+		var nodeList = this.getElementsByAttribute('gashboard-role');
+		for (var i = 0, elem; elem = nodeList[i]; i++) {
+			if ( elem.getAttribute('gashboard-role') == e ) return elem; 
+		}
+	}
+	Element.prototype.getElementsByRoles = function(e){
+		var nodeList = this.getElementsByAttribute('gashboard-role');
+		var nodeArray = [];
+		for (var i = 0, elem; elem = nodeList[i]; i++) {
+			if ( elem.getAttribute('gashboard-role') == e )  nodeArray.push(elem);
+		}
+		return nodeArray;
+	}
 
 	// Export
 	window.Dashboard = Dashboard;
